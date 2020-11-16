@@ -37,7 +37,7 @@ class Modmail(commands.Bot):
         try:
             with open('config.json') as f:
                 config = json.load(f)
-                if config.get('TOKEN') == "your_token_here":
+                if config.get('TOKEN') == "Nzc3OTczMTIwOTA4MDAxMzEx.X7LN7g.9jSBU4FtfmhVJvvx8SdLBdcFDlA":
                     if not os.environ.get('TOKEN'):
                         self.run_wizard()
                 else:
@@ -51,7 +51,7 @@ class Modmail(commands.Bot):
         '''Returns the prefix.'''
         with open('config.json') as f:
             prefix = json.load(f).get('PREFIX')
-        return os.environ.get('PREFIX') or prefix or 'm.'
+        return os.environ.get('PREFIX') or prefix or '.'
 
     @staticmethod
     def run_wizard():
@@ -106,7 +106,7 @@ class Modmail(commands.Bot):
         ---------------
         Client is ready!
         ---------------
-        Author: Kyb3r#7220
+        Author: bluu x vaqq
         ---------------
         Logged in as: {self.user}
         User ID: {self.user.id}
@@ -130,9 +130,9 @@ class Modmail(commands.Bot):
     def help_embed(self, prefix):
         em = discord.Embed(color=0x00FFFF)
         em.set_author(name='Mod Mail - Help', icon_url=self.user.avatar_url)
-        em.description = 'This bot is a python implementation of a stateless "Mod Mail" bot. ' \
-                         'Made by Kyb3r and improved by the suggestions of others. This bot ' \
-                         'saves no data and utilises channel topics for storage and syncing.' 
+        em.description = 'This bot is a python   ' \
+                         'Made by vaqq x bluu  ' 
+                          
                  
 
         cmds = f'`{prefix}setup [modrole] <- (optional)` - Command that sets up the bot.\n' \
@@ -147,8 +147,7 @@ class Modmail(commands.Bot):
                'Modifying the channel topic will also break the system.'
         em.add_field(name='Commands', value=cmds)
         em.add_field(name='Warning', value=warn)
-        em.add_field(name='Github', value='https://github.com/verixx/modmail')
-        em.set_footer(text='Star the repository to unlock hidden features!')
+       
 
         return em
 
